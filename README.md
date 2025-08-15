@@ -35,7 +35,7 @@ Unauthorized reproduction, distribution, modification, or use of the contents he
 
 For your tailored automation solutions:
 
-IBAI – AI Integration & Client Success Specialist  
+IBAI – IBAI | Delivering AI Solutions from a Human Perspective  
 Email: iainbackeberg@gmail.com  
-LinkedIn: https://www.linkedin.com/in/iain-backeberg
+Website: https://www.ib-ai.tech
 
