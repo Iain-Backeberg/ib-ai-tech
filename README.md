@@ -1,6 +1,6 @@
 # IBAI | Delivering AI Solutions from a Human Perspective 
 
-This repository hosts the source code for [ib-ai.tech](https://ib-ai.tech), the official website for IBAI – Delivering AI solutions from a human perspective.
+This repository hosts the source code for [ib-ai.tech](https://ib-ai.tech), the official website for IBAI | Delivering AI Solutions from a Human Perspective.
 
 ## About
 
