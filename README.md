@@ -17,8 +17,8 @@ Currently, this repo contains a holding page while the full website is under dev
 ## Usage Conditions
 
 - Do not clone, fork, or republish this repository
-- Do not use the codebase for commercial, educational, or derivative work without written permission
 - Copyright © 2025 Iain Backeberg | ib-ai.tech. All Rights Reserved
+- Unauthorized reproduction, distribution, modification, or use of the contents herein, in whole or in part, is strictly prohibited under any circumstances
 
 
 ## License
@@ -28,8 +28,7 @@ Copyright © 2025 Iain Backeberg | ib-ai.tech.
 
 This repository, code and its contents are the intellectual property of Iain Backeberg, the owner and operator of **IBAI | Delivering AI Solutions from a Human Perspective**.
 
-Unauthorized reproduction, distribution, modification, or use of the contents herein, in whole or in part, is strictly prohibited under any cicumstances.
-
+Unauthorized reproduction, distribution, modification, or use of the contents herein, in whole or in part, is strictly prohibited under any circumstances.
 
 ## Contact
 
@@ -38,4 +37,3 @@ For your tailored automation solutions:
 IBAI – IBAI | Delivering AI Solutions from a Human Perspective  
 Email: iainbackeberg@gmail.com  
 Website: https://www.ib-ai.tech
-
