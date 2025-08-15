@@ -24,7 +24,7 @@ Currently, this repo contains a holding page while the full website is under dev
 ## License
 
 **All Rights Reserved**  
-© 2025 Iain Backeberg
+Copyright © 2025 Iain Backeberg | ib-ai.tech.
 
 This repository, code and its contents are the intellectual property of Iain Backeberg, the owner and operator of **IBAI | Delivering AI Solutions from a Human Perspective**.
 
