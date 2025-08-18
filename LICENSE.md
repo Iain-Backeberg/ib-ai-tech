@@ -9,8 +9,8 @@ Unauthorized reproduction, distribution, modification, or use of the contents he
 
 ## Contact
 
-For your tailored automation solutions:
+For your tailored AI solutions:
 
-IBAI – IBAI | Delivering AI Solutions from a Human Perspective  
-Email: iainbackeberg@gmail.com  
-Website: https://www.ib-ai.tech
+**IBAI | Delivering AI Solutions from a Human Perspective**  
+Email: [iain@ib-ai.tech](mailto:iain@ib-ai.tech) 
+Website: [https://www.ib-ai.tech](https://www.ib-ai.tech)
