@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let consent = JSON.parse(localStorage.getItem("cookieConsent"));
     if (consent && consent.analytics) {
       var gaScript = document.createElement("script");
-      gaScript.src = "https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID";
+      gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-WTDLZV4CGV";
       gaScript.async = true;
       document.head.appendChild(gaScript);
 
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag("js", new Date());
-        gtag("config", "GA_MEASUREMENT_ID");
+        gtag("config", "G-WTDLZV4CGV");
       };
     }
   }
