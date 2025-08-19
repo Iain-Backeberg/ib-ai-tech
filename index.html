@@ -126,5 +126,245 @@
 
     <div class="footer">Copyright © 2025 Iain Backeberg | ib-ai.tech. All Rights Reserved</div>
   </main>
+	<style>
+  /* Cookie banner container */
+  #cookie-banner {
+    position: fixed;
+    left: 50%;
+    bottom: -700px; /* fully hidden off-screen */
+    transform: translateX(-50%);
+    width: 400px;
+    height: 400px;
+    font-size:12px;
+    background: #fff;
+    color: #393939;
+    padding:50px;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    overflow: hidden;
+    transition: bottom 0.5s ease-in-out;
+  }
+
+  /* Close button top-right */
+  #cookie-banner #close-banner {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: darkgreen !important;
+    z-index: 10000;
+  }
+
+  /* Scrollable content */
+  #cookie-banner .content {
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+    width: 100%;
+  }
+
+  /* Orange 1px hr with horizontal padding */
+  #cookie-banner hr {
+    border: none;
+    height: 1px;
+    background-color: orange;
+    margin: 15px 0;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+    align-self: center;
+  }
+
+  /* Toggle switches */
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin: 0; /* reset margin for right alignment */
+  }
+
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:red !important;
+    transition: 0.4s;
+    border-radius: 24px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  .toggle-switch input:checked + .slider {
+    background-color: darkgreen !important;
+  }
+
+  .toggle-switch input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  /* Row wrapper for h3 + toggle */
+  .cookie-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .cookie-row h3 {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  /* Footer buttons sticky */
+  #cookie-banner .footer-buttons {
+    background: #fff;
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+  }
+
+  #cookie-banner .footer-buttons button {
+    background: #FFFFFF !important;
+    color: darkgreen !important ;
+    border: 2px solid darkgreen !important;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #cookie-banner .footer-buttons button:hover {
+    background: darkgreen !important;
+    color: #ffffff !important ;
+  }
+
+  /* Manage Cookies button */
+  #manage-cookies-btn {
+    background: #444;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+
+<div id="cookie-banner">
+  <button id="close-banner">✕</button>
+
+  <div class="content">
+    <h2>Consent Preferences</h2>
+    <p>We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below.</p>
+    <p>The cookies that are categorised as <strong>"Necessary"</strong> are stored on your browser as they are essential for enabling the basic functionalities of the site.</p>
+    <p>We also use third-party cookies that help us analyse how you use this website, store your preferences, and provide the content and advertisements that are relevant to you. These cookies will only be stored in your browser with your prior consent.</p>
+    <hr>
+
+    <div class="cookie-row"><h3>Necessary</h3><span style="font-size:12px; font-weight:bold; color:darkgreen;">Always Active</span></div>
+    <p>Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data.</p>
+    <hr>
+
+    <div class="cookie-row">
+      <h3>Functional</h3>
+      <label class="toggle-switch">
+        <input type="checkbox" id="functional">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <p>Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features.</p>
+    <hr>
+
+    <div class="cookie-row">
+      <h3>Analytics</h3>
+      <label class="toggle-switch">
+        <input type="checkbox" id="analytics">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <p>Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.</p>
+    <details style="margin:10px 0;">
+      <summary>Show cookie details</summary>
+      <ul>
+        <li><strong>_ga</strong> – 1 year 1 month 4 days – Google Analytics visitor tracking</li>
+        <li><strong>_ga_*</strong> – 1 year 1 month 4 days – Google Analytics page views</li>
+      </ul>
+    </details>
+    <hr>
+
+    <div class="cookie-row">
+      <h3>Performance</h3>
+      <label class="toggle-switch">
+        <input type="checkbox" id="performance">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <p>Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors.</p>
+    <hr>
+
+    <h3>Advertisement</h3>
+    <p><em>There are no advertising cookies on this website. No data is stored for advertising purposes.</em></p>
+    <hr>
+
+    <h3>Third-Party Cookies</h3>
+    <p>Some cookies are set by third-party services that we use, such as the hosting platform (e.g., Streamlit) or embedded tools. These cookies are <strong>outside of our control</strong> and are used for basic functionality or service performance.</p>
+    <p><em>No user control is available for these cookies.</em></p>
+    <hr>
+  </div>
+
+  <div class="footer-buttons">
+    <button id="reject-all">Reject All</button>
+    <button id="accept-all">Accept All</button>
+    <button id="save-prefs">Save My Preferences</button>
+  </div>
+</div>
+
+<div style="position:fixed;bottom:10px;right:10px;z-index:9998;">
+  <button id="manage-cookies-btn">🍪 Manage Cookies</button>
+</div>
+
+<!-- GA Consent Mode setup -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Default deny cookies until user consents
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied'
+  });
+
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID', { anonymize_ip: true });
+</script>
+  <script src="js/preferences.js"></script>
 </body>
 </html>
