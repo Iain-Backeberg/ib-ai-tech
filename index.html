@@ -324,12 +324,16 @@
   /* Stack footer buttons vertically */
   #cookie-banner .footer-buttons {
     flex-direction: column;
-    gap: 8px;
+	align-items: stretch; /* makes buttons same width */
+    gap: 6px;
   }
 
   #cookie-banner .footer-buttons button {
-    flex: 1 1 100%;
+    flex:100%;
     min-width: 100%; /* force full width on mobile */
+	  margin: 0 auto;     /* centre buttons */
+    font-size: 12px;    /* smaller font on mobile */
+    padding: 6px 10px;  /* smaller padding */
   }
 }
 
