@@ -303,9 +303,10 @@
   }
   #cookie-banner .content p {
   padding-right:10px;
-	    white-space: normal;   /* allow wrapping */
-  word-wrap: break-word; /* break long words if needed */
-  overflow-wrap: break-word; /* fallback for older browsers */
+  white-space: normal !important;       /* allow wrapping */
+  word-break: break-word !important;    /* break long words */
+  overflow-wrap: anywhere !important;   /* force break if needed */
+  hyphens: auto;
   margin: 0 0 10px 0;    /* optional spacing *
   }
   /* Make cookie rows wrap fully and keep spacing */
