@@ -293,6 +293,10 @@
   #cookie-banner {
     width: 100%;
     font-size: 12px;
+	height: auto;           /* no fixed height */
+    max-height: 90vh;       /* prevent overspill off-screen */
+    overflow: auto;         /* allow scroll if needed */
+    padding: 20px;
   }
 
   /* Ensure content area scrolls and leaves room for footer */
