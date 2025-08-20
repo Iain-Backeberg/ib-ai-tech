@@ -287,6 +287,19 @@
     border-radius: 5px;
     cursor: pointer;
   }
+		@media (max-width: 480px) {
+  #cookie-banner {
+    width: 95%;        /* almost full width */
+    max-width: 360px;  /* don’t exceed 360px */
+    padding: 15px;     /* reduce padding for small screens */
+    font-size: 11px;   /* smaller font */
+  }
+
+  /* Optional: reduce top/bottom padding for very short viewports */
+  #cookie-banner .content {
+    max-height: calc(90vh - 80px); /* leave room for footer + close button */
+  }
+}
 </style>
 
 <div id="cookie-banner">
