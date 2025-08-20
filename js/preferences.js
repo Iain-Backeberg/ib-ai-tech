@@ -5,22 +5,35 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function loadAnalytics() {
-    let consent = JSON.parse(localStorage.getItem("cookieConsent"));
-    if (consent && consent.analytics) {
-      var gaScript = document.createElement("script");
-      gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-WTDLZV4CGV";
-      gaScript.async = true;
-      document.head.appendChild(gaScript);
+  let consent = JSON.parse(localStorage.getItem("cookieConsent"));
+  if (consent && consent.analytics) {
+    var gaScript = document.createElement("script");
+    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-WTDLZV4CGV";
+    gaScript.async = true;
+    document.head.appendChild(gaScript);
 
-      gaScript.onload = function() {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag("js", new Date());
-        gtag("config", "G-WTDLZV4CGV");
-      };
+    gaScript.onload = function() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-WTDLZV4CGV");
+
+      // ✅ Update consent now that analytics is allowed
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted'
+      });
+
+      // Fire a pageview immediately
+      gtag('event', 'page_view');
+    };
+  }
+}
     }
   }
-
+// Fire a pageview immediately
+  gtag('event', 'page_view');
+};
   // Open the banner
   document.getElementById("manage-cookies-btn").onclick = () => {
     let saved = JSON.parse(localStorage.getItem("cookieConsent")) || {};
