@@ -287,6 +287,59 @@
     border-radius: 5px;
     cursor: pointer;
   }
+		/* Mobile responsiveness */
+@media (max-width: 600px) {
+  #cookie-banner {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  #cookie-banner .cookie-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  #cookie-banner .footer-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  #cookie-banner .footer-buttons button {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* Extra small screens */
+@media (max-width: 480px) {
+  #cookie-banner {
+    width: 95%;
+    padding: 15px;
+    font-size: 13px;
+  }
+
+  #cookie-banner .cookie-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  #cookie-banner .footer-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  #cookie-banner .footer-buttons button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
 </style>
 
 <div id="cookie-banner">
