@@ -303,6 +303,9 @@
   #cookie-banner .content {
     max-height: calc(90vh - 100px);
     padding-right: 10px; /* ensures text and sliders don’t overflow */
+	white-space: normal;          /* allow wrapping */
+    word-wrap: break-word;        /* break long words */
+    overflow-wrap: break-word;    /* modern equivalent */
   }
 #cookie-banner .content p {
     padding: 0 15px;          /* left/right padding */
@@ -320,7 +323,8 @@
   .cookie-row h3 {
     margin: 0 0 5px 0;
     font-size: 13px;
-	  padding: 0 15px;          /* same padding for header */
+	padding: 0 15px;          /* same padding for header */
+    white-space: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
