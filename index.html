@@ -287,17 +287,49 @@
     border-radius: 5px;
     cursor: pointer;
   }
+
 		@media (max-width: 480px) {
   #cookie-banner {
-    width: 85%;        /* almost full width */
-    max-width: 360px;  /* don’t exceed 360px */
-    padding: 10px;     /* reduce padding for small screens */
-    font-size: 11px;   /* smaller font */
+    width: 85%;
+    max-width: 360px;
+    padding: 15px 15px 20px 15px; /* add right/left padding */
+    font-size: 11px;
   }
 
-  /* Optional: reduce top/bottom padding for very short viewports */
+  /* Ensure content area scrolls and leaves room for footer */
   #cookie-banner .content {
-    max-height: calc(80vh - 80px); /* leave room for footer + close button */
+    max-height: calc(90vh - 100px);
+    padding-right: 10px; /* ensures text and sliders don’t overflow */
+  }
+
+  /* Make cookie rows wrap fully and keep spacing */
+  .cookie-row {
+    flex-wrap: wrap;
+    justify-content: flex-start; /* avoid pushing items out */
+    gap: 10px; /* space between h3 and toggle */
+  }
+
+  .cookie-row h3 {
+    flex: 1 1 100%; /* full width on mobile */
+    margin: 0 0 5px 0;
+    font-size: 12px;
+  }
+
+  .cookie-row .toggle-switch {
+    flex: 0 0 auto; /* keep toggle size */
+    width: 50px;
+    height: 24px;
+  }
+
+  /* Stack footer buttons vertically */
+  #cookie-banner .footer-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #cookie-banner .footer-buttons button {
+    flex: 1 1 100%;
+    min-width: 100%; /* force full width on mobile */
   }
 }
 </style>
