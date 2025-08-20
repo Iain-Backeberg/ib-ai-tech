@@ -341,12 +341,14 @@
     padding: 10px 10px;  /* smaller padding */
   }
    #cookie-banner hr {
-    width: 100%;          /* full width of container */
-    margin: 8px 0;        /* vertical spacing */
-    padding: 0;
-    border: none;
-    border-top: 1px solid #ff8800;
-    box-sizing: border-box; /* ensures it respects padding of parent */
+     border: none;
+  border-top: 1px solid #ff8800;
+  margin: 8px 0;
+  padding: 0;
+  width: calc(100% - 30px); /* subtract left + right padding of container */
+  margin-left: auto;
+  margin-right: auto;       /* centers it */
+  box-sizing: border-box;
   }
 }
 
