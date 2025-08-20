@@ -139,18 +139,19 @@
   </main>
 	<style>
   /* Cookie banner container */
- #cookie-banner {
+/* Cookie banner container */
+#cookie-banner {
   position: fixed;
   left: 50%;
-  bottom: -100%; /* fully hidden off-screen */
+  bottom: -100%;
   transform: translateX(-50%);
-  width: 90%;           /* responsive width */
-  max-width: 400px;     /* max width */
-  max-height: 90vh;     /* max height: 90% of viewport */
+  width: 95%;
+  max-width: 400px;
+  max-height: 90vh; /* prevent vertical overflow */
   font-size: 12px;
   background: #fff;
   color: #393939;
-  padding: 20px;        /* smaller, flexible padding */
+  padding: 15px;
   display: flex;
   flex-direction: column;
   z-index: 9999;
@@ -160,11 +161,21 @@
   transition: bottom 0.5s ease-in-out;
 }
 
-/* Close button top-right */
+/* Make content scrollable if too tall */
+#cookie-banner .content {
+  overflow-y: auto;
+  flex: 1 1 auto;
+  padding: 0;
+  width: 100%;
+  min-height: 50px;
+  max-height: calc(90vh - 100px); /* leaves space for buttons and close */
+}
+
+/* Close button */
 #cookie-banner #close-banner {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   background: none;
   border: none;
   font-size: 18px;
@@ -173,30 +184,21 @@
   z-index: 10000;
 }
 
-/* Scrollable content */
-#cookie-banner .content {
-  padding: 10px;
-  overflow-y: auto;
-  flex: 1;
-  width: 100%;
-}
-
-/* Orange 1px hr */
+/* Horizontal line */
 #cookie-banner hr {
   border: none;
   height: 1px;
   background-color: orange;
-  margin: 15px 0;
+  margin: 10px 0;
   width: 100%;
 }
 
-/* Toggle switches */
+/* Toggle switch */
 .toggle-switch {
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 24px;
-  margin: 0;
+  width: 45px;
+  height: 22px;
 }
 
 .toggle-switch input {
@@ -214,7 +216,7 @@
   bottom: 0;
   background-color: red !important;
   transition: 0.4s;
-  border-radius: 24px;
+  border-radius: 22px;
 }
 
 .slider:before {
@@ -222,8 +224,8 @@
   content: "";
   height: 18px;
   width: 18px;
-  left: 3px;
-  bottom: 3px;
+  left: 2px;
+  bottom: 2px;
   background-color: white;
   transition: 0.4s;
   border-radius: 50%;
@@ -234,77 +236,76 @@
 }
 
 .toggle-switch input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(23px);
 }
 
 /* Row wrapper for h3 + toggle */
 .cookie-row {
   display: flex;
+  flex-wrap: wrap; /* wrap on small screens */
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap; /* wrap on small screens */
-  margin-top: 10px;
+  margin-top: 8px;
+  gap: 5px;
 }
 
 .cookie-row h3 {
-  margin: 0;
-  font-size: 14px;
-  flex: 1 1 60%;  /* allow h3 to shrink on small screens */
+  flex: 1 1 60%;
   min-width: 120px;
-  margin-right: 10px;
+  font-size: 13px;
+  margin: 0;
 }
 
 .cookie-row .toggle-switch {
-  flex: 1 1 30%;  /* shrink toggle on small screens */
-  margin-top: 5px;
+  flex: 0 0 auto;
 }
 
-/* Footer buttons sticky */
+/* Footer buttons */
 #cookie-banner .footer-buttons {
-  background: #fff;
-  padding: 10px 0;
-  width: 100%;
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
-  justify-content: flex-end; /* aligns buttons to right, wraps on small */
+  gap: 8px;
+  justify-content: flex-end;
+  padding: 8px 0;
   border-top: 1px solid #ddd;
 }
 
 #cookie-banner .footer-buttons button {
-  background: #FFFFFF !important;
+  flex: 1 1 auto;
+  min-width: 100px;
+  background: #fff !important;
   color: darkgreen !important;
   border: 2px solid darkgreen !important;
-  padding: 8px 12px;
+  padding: 8px 10px;
   border-radius: 5px;
   cursor: pointer;
-  flex: 1 1 auto; /* buttons shrink on small screens */
 }
 
 #cookie-banner .footer-buttons button:hover {
   background: darkgreen !important;
-  color: #ffffff !important;
+  color: #fff !important;
 }
 
 /* Manage Cookies button */
 #manage-cookies-btn {
   background: #444;
   color: #fff;
-  padding: 8px 12px;
+  padding: 8px 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-/* Media query for extra small screens */
+/* Extra small screens adjustments */
 @media (max-width: 360px) {
   #cookie-banner {
-    padding: 15px;
+    padding: 10px;
     font-size: 11px;
   }
 
   .cookie-row h3 {
     font-size: 12px;
+    flex: 1 1 100%;
   }
 
   .toggle-switch {
@@ -322,6 +323,11 @@
   .toggle-switch input:checked + .slider:before {
     transform: translateX(20px);
   }
+
+  #cookie-banner .footer-buttons button {
+    flex: 1 1 100%;
+  }
+}
 
 </style>
 
