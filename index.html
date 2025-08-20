@@ -288,55 +288,48 @@
     cursor: pointer;
   }
 		/* Mobile responsiveness */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   #cookie-banner {
-    width: 85%;
-    height: auto;
-    padding: 10px 10px 10px 10px;
-    font-size: 14px;
+    width: 95%;
+    max-width: 360px;
+    padding: 15px 15px 20px 15px; /* add right/left padding */
+    font-size: 11px;
   }
 
-  #cookie-banner .cookie-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
+  /* Ensure content area scrolls and leaves room for footer */
+  #cookie-banner .content {
+    max-height: calc(90vh - 100px);
+    padding-right: 10px; /* ensures text and sliders don’t overflow */
   }
 
+  /* Make cookie rows wrap fully and keep spacing */
+  .cookie-row {
+    flex-wrap: wrap;
+    justify-content: flex-start; /* avoid pushing items out */
+    gap: 10px; /* space between h3 and toggle */
+  }
+
+  .cookie-row h3 {
+    flex: 1 1 100%; /* full width on mobile */
+    margin: 0 0 5px 0;
+    font-size: 12px;
+  }
+
+  .cookie-row .toggle-switch {
+    flex: 0 0 auto; /* keep toggle size */
+    width: 50px;
+    height: 24px;
+  }
+
+  /* Stack footer buttons vertically */
   #cookie-banner .footer-buttons {
     flex-direction: column;
-    align-items: stretch;
     gap: 8px;
   }
 
   #cookie-banner .footer-buttons button {
-    width: 100%;
-    text-align: center;
-  }
-}
-/* Extra small screens */
-@media (max-width: 480px) {
-  #cookie-banner {
-    width: 80%;
-    padding: 5px 5px 5px 5px 5px;
-    font-size: 13px;
-  }
-
-  #cookie-banner .cookie-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-
-  #cookie-banner .footer-buttons {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 3px;
-  }
-
-  #cookie-banner .footer-buttons button {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
+    flex: 1 1 100%;
+    min-width: 100%; /* force full width on mobile */
   }
 }
 
