@@ -1,0 +1,540 @@
+/* ========================
+   Global Page Settings
+   ======================== */
+html, body {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #393939;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========================
+   Header & Navigation
+   ======================== */
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
+    border-bottom: 1px solid orange !important;
+}
+
+.sticky-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    gap: 20px;
+}
+
+.left-header, .right-header .whatsapp-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.left-header img {
+    height: 60px;
+    width: auto;
+}
+
+.tagline {
+    font-size: 16px;
+    font-weight: 600;
+    color: #393939;
+}
+
+.right-header .whatsapp-link {
+    gap: 8px;
+    text-decoration: none;
+    color: darkgreen;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.right-header img {
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+}
+
+/* ========================
+   Containers & Rows
+   ======================== */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+/* ========================
+   WhatsApp Banner
+   ======================== */
+.whatsapp-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 8px;
+}
+
+.whatsapp-banner b {
+    font-size: 20px;
+}
+
+.whatsapp-banner b,
+.whatsapp-banner a.whatsapp {
+    white-space: normal;
+}
+
+.whatsapp-contact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.whatsapp-contact img {
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+}
+
+.whatsapp-contact a.whatsapp {
+    color: darkgreen;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* ========================
+   Buttons
+   ======================== */
+#manage-cookies-btn,
+#home-btn,
+.footer-buttons button {
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+#manage-cookies-btn,
+#home-btn {
+    background: #444;
+    color: #fff;
+    border: none;
+}
+
+.footer-buttons button {
+    width: 20%;
+    background: #fff !important;
+    color: darkgreen !important;
+    border: 2px solid darkgreen !important;
+}
+
+.footer-buttons button:hover {
+    background: darkgreen !important;
+    color: #fff !important;
+}
+
+/* ========================
+   Intro Text
+   ======================== */
+.intro-text {
+    text-align: center;
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.intro-text a {
+    text-decoration: none;
+    color: darkgreen !important;
+    font-size: 20px;
+}
+
+.intro-text a:hover {
+    text-decoration: none;
+}
+
+/* ========================
+   Cards
+   ======================== */
+.cards,
+.licenses-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.cards {
+    justify-content: flex-start;
+}
+
+.card,
+.license-card {
+    border-radius: 12px;
+    padding: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card {
+    background-color: darkgreen;
+    color: #ffffff;
+    width: 30%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.card img,
+.license-card img.main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.card-desc {
+    font-weight: normal;
+}
+
+.licenses-cards {
+    flex-direction: row;
+}
+
+.license-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: darkgreen;
+    width: 200px;
+    max-width: 90%;
+    text-decoration: none;
+    gap: 8px;
+}
+
+.license-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.institution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.institution img.logo {
+    width: 24px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.institution .institution-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: darkgreen;
+}
+
+/* ========================
+   Footer
+   ======================== */
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0;
+    font-size: 12px;
+    font-weight: bold;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.site-footer img {
+    max-height: 20px;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.site-footer a {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+/* ========================
+   Horizontal Rule
+   ======================== */
+hr {
+    border: none;
+    border-top: 1px solid #FF8C00;
+    margin: 8px 0;
+}
+
+/* ========================
+   Toggle Switch
+   ======================== */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red !important;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.toggle-switch input:checked + .slider {
+    background-color: darkgreen !important;
+}
+
+.toggle-switch input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* ========================
+   Cookie Row
+   ======================== */
+.cookie-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cookie-row h3 {
+    flex: 1 1 100%;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.cookie-row span {
+    white-space: normal;
+}
+
+.cookie-row .toggle-switch {
+    flex: 0 0 auto;
+    width: 50px;
+    height: 24px;
+}
+
+/* ========================
+   Lead Gen Chat
+   ======================== */
+.chat-container {
+    width: 90%;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #393939;
+}
+
+#messages-container {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.message-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.user-avatar,
+.bot-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.user-avatar { background: #cccccc; }
+.bot-avatar { background: #00aaff; }
+
+.user-label,
+.bot-label {
+    font-weight: bold;
+    color: #393939;
+}
+
+.thinking-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f9f9f9;
+    border: 1px solid #393939;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #393939;
+    margin-top: 4px;
+}
+
+.bouncing-dots span {
+    display: inline-block;
+    width: 6px;
+    height: 8px;
+    margin-left: 3px;
+    background-color: black !important;
+    border-radius: 50%;
+    animation: bounce 0.8s infinite ease-in-out;
+}
+
+.bouncing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.bouncing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+    0%, 80%,100% { transform: translateY(0); }
+    40% { transform: translateY(-8px); }
+}
+
+.thumbs { margin-top: 4px; display: flex; gap: 8px; }
+
+.input-container {
+    padding: 12px;
+    border-top: 1px solid #ddd;
+    background: #ffffff;
+    position: sticky;
+    bottom: 0;
+}
+
+#chat-input,
+#chat-input a {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid orange;
+    border-radius: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#chat-input:focus,
+#chat-input:hover { outline: none; border: 1px solid orange; box-shadow: none; }
+
+/* ========================
+   Responsive
+   ======================== */
+@media (max-width: 768px) {
+    .card, .license-card { width: 100%; min-width: unset; }
+    .licenses-cards { gap: 12px; }
+    .whatsapp-banner { flex-direction: column; align-items: center; text-align: center; gap: 8px; }
+    .whatsapp-contact {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        width: 100%;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .whatsapp-contact img { 
+	 width: 6vw; 
+	 max-width: 45px; 
+	 height: auto; 
+	 flex-shrink: 0; 
+	 }
+    
+	 .left-header img { 
+	 height: 8vw; 
+	 max-height: 45px; flex-shrink: 0; 
+	 }
+    .right-header img { 
+	 height: 6vw; 
+	 max-height: 50px; flex-shrink: 0;
+	 }
+    .tagline { 
+	 font-size: 3vw; 
+	 white-space: normal;
+	 text-align: center;
+	 }
+    .right-header .whatsapp-link { 
+	 font-size: 3vw; 
+	 white-space: normal; 
+	 text-align: right; 
+	 }
+    .whatsapp-contact a.whatsapp { 
+	 font-size: 12px; 
+	 white-space: normal; 
+	 }
+    .site-footer { 
+	 flex-direction: column; 
+	 align-items: center; 
+	 text-align: center; 
+	 gap: 8px; 
+	 }
+    .footer-buttons button { 
+	 display: block; 
+	 width: 93%; 
+	 margin-bottom: 6px; 
+	 }
+    .site-footer img { 
+	 max-height: 18px; 
+	 }
+}
