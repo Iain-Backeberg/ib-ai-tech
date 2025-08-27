@@ -80,24 +80,30 @@ function addInitialMessage() {
   function addBotThinking() {
     const box = document.createElement("div");
     box.className = "thinking-box";
+    box.style.display = "flex";
+    box.style.alignItems = "center";
+    box.style.gap = "8px";
 
-	 // Brain icon
+    // Brain icon
     const brain = document.createElement("span");
     brain.textContent = "🧠";
     brain.style.fontSize = "24px";
-	   // Thinking text
+
+    // Thinking text
     const thinkingText = document.createElement("span");
     thinkingText.textContent = "Thinking...";
     thinkingText.style.fontSize = "16px";
     thinkingText.style.color = "#555";
 
+    // Bouncing dots
     const dots = document.createElement("span");
     dots.className = "bouncing-dots";
     dots.innerHTML = "<span></span><span></span><span></span>";
 
-box.appendChild(brain);
+    box.appendChild(brain);
     box.appendChild(thinkingText);
     box.appendChild(dots);
+
     // Always label as "IBAI Consultant"
     return createMessageRow("bot", "IBAI Consultant", box);
   }
