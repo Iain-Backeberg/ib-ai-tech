@@ -28,43 +28,48 @@ header {
     border-bottom: 1px solid orange !important;
 }
 
-.sticky-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 90px;
-    gap: 20px;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  width: 100%;
 }
 
-.left-header, .right-header .whatsapp-link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #393939;
 }
 
-.left-header img {
-    height: 60px;
-    width: auto;
+.header-left img {
+  height: 60px;
+  width: auto;
 }
 
-.tagline {
-    font-size: 16px;
-    font-weight: 600;
-    color: #393939;
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  
 }
 
-.right-header .whatsapp-link {
-    gap: 8px;
-    text-decoration: none;
-    color: darkgreen;
-    font-weight: bold;
-    font-size: 12px;
+.header-right a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: darkgreen;
+  font-weight: bold;
+  font-size: 12px;
 }
 
-.right-header img {
-    width: 100%;
-    max-width: 50px;
-    height: auto;
+.header-right img {
+  width: 50px;
+  height: auto;
 }
 
 /* ========================
@@ -84,47 +89,6 @@ header {
     margin-bottom: 12px;
 }
 
-/* ========================
-   WhatsApp Banner
-   ======================== */
-.whatsapp-banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-    flex-wrap: wrap;
-    text-align: center;
-    gap: 8px;
-}
-
-.whatsapp-banner b {
-    font-size: 20px;
-}
-
-.whatsapp-banner b,
-.whatsapp-banner a.whatsapp {
-    white-space: normal;
-}
-
-.whatsapp-contact {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-    flex-wrap: wrap;
-}
-
-.whatsapp-contact img {
-    width: 100%;
-    max-width: 50px;
-    height: auto;
-}
-
-.whatsapp-contact a.whatsapp {
-    color: darkgreen;
-    font-weight: bold;
-    font-size: 12px;
-}
 
 /* ========================
    Buttons
@@ -481,48 +445,46 @@ hr {
    Responsive
    ======================== */
 @media (max-width: 768px) {
-    .card, .license-card { width: 100%; min-width: unset; }
+   
+	 .card, .license-card { width: 100%; min-width: unset; }
     .licenses-cards { gap: 12px; }
-    .whatsapp-banner { flex-direction: column; align-items: center; text-align: center; gap: 8px; }
-    .whatsapp-contact {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 6px;
-        width: 100%;
-        flex-wrap: wrap;
-        text-align: center;
-    }
-    .whatsapp-contact img { 
-	 width: 6vw; 
-	 max-width: 45px; 
-	 height: auto; 
-	 flex-shrink: 0; 
-	 }
-    
-	 .left-header img { 
-	 height: 8vw; 
-	 max-height: 45px; flex-shrink: 0; 
-	 }
-    .right-header img { 
-	 height: 6vw; 
-	 max-height: 50px; flex-shrink: 0;
-	 }
-    .tagline { 
-	 font-size: 3vw; 
-	 white-space: normal;
-	 text-align: center;
-	 }
-    .right-header .whatsapp-link { 
-	 font-size: 3vw; 
-	 white-space: normal; 
-	 text-align: right; 
-	 }
-    .whatsapp-contact a.whatsapp { 
-	 font-size: 12px; 
-	 white-space: normal; 
-	 }
+
+.header {
+    flex-direction: column;
+    align-items: flex-start; /* left-align everything */
+    gap: 3px;
+  }
+
+  .header-left {
+    font-size: 14px;
+    display: flex;
+    align-items: center; /* ensures image + text vertically centred */
+    gap: 10px;
+  }
+
+  .header-left img {
+    height: 8vh;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center; /* ensures image + text vertically centred */
+    gap: 20px; 
+    padding-left: 0p; /* remove any default indentation */
+  }
+
+  .header-right a {
+    font-size: 11px;
+    display: flex;
+    align-items: center; /* ensures text aligns with image */
+    gap: 3px;
+    padding: 0; /* remove extra padding */
+  }
+
+  .header-right img {
+    height: 8vh;
+  }
+	
     .site-footer { 
 	 flex-direction: column; 
 	 align-items: center; 
@@ -538,3 +500,4 @@ hr {
 	 max-height: 18px; 
 	 }
 }
+
