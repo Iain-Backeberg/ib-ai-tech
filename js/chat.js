@@ -1,5 +1,5 @@
 (function() {
-  const API_URL = "https://backend-785579985879.africa-south1.run.app/chat";
+  const API_URL = "https://YOUR-CLOUD-RUN-URL.a.run.app/chat";
   let messagesContainer;
   let conversation = [];
   let inputEl;
@@ -147,21 +147,18 @@ function addInitialMessage() {
     const botWrapper = addBotThinking();
 
     try {
-    const res = await fetch(API_URL, {
+      const res = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ 
-            message: message, 
-            user_id: "website_user" 
-        })
-    });
-    const data = await res.json();
-    conversation.push({ role: "assistant", content: data.reply });
-    replaceThinkingWithAnswer(botWrapper, data.reply || "Sorry, something went wrong.");
-} catch (err) {
-    replaceThinkingWithAnswer(botWrapper, "Unable to reach server.");
-    console.error(err);
-}
+        body: JSON.stringify({ history: conversation })
+      });
+      const data = await res.json();
+      conversation.push({ role: "assistant", content: data.reply });
+      replaceThinkingWithAnswer(botWrapper, data.reply || "Sorry, something went wrong.");
+    } catch (err) {
+      replaceThinkingWithAnswer(botWrapper, "Unable to reach server.");
+      console.error(err);
+    }
   }
 
   function initChat() {
