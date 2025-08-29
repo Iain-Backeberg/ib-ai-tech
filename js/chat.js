@@ -162,7 +162,7 @@ try {
     replaceThinkingWithAnswer(botWrapper, "Unable to reach server.");
     console.error(err);
 }
-
+  }
   function initChat() {
     messagesContainer = document.getElementById("messages-container");
     inputEl = document.getElementById("chat-input");
