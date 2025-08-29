@@ -147,9 +147,12 @@ function addInitialMessage() {
     const botWrapper = addBotThinking();
 
     try {
-      const res = await fetch(API_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+   const res = await fetch(API_URL, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ 
+      message: message, 
+      user_id: "website_user" 
         body: JSON.stringify({ history: conversation })
       });
       const data = await res.json();
