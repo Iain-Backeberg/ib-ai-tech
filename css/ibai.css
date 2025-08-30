@@ -8,7 +8,6 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-	width: 100%;
 }
 
 a {
@@ -447,7 +446,7 @@ hr {
    ======================== */
 @media (max-width: 768px) {
    
-	 .card, .license-card { width: 90%; min-width: unset; }
+	 .card, .license-card { width: 100%; min-width: unset; }
     .licenses-cards { gap: 12px; }
 
 .header {
@@ -485,11 +484,13 @@ hr {
   .header-right img {
     height: 8vh;
   }
+	
 #chat-input,
 #chat-input a {
-    font-size: 13px;
-}	
-    .site-footer { 
+    font-size: 12px;
+    box-sizing: border-box;
+} 
+	 .site-footer { 
 	 flex-direction: column; 
 	 align-items: center; 
 	 text-align: center; 
