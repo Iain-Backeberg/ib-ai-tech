@@ -450,7 +450,15 @@ hr {
   
 .card, .license-card { width: 100%; min-width: unset; }
 .licenses-cards { gap: 12px; }
-
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
+    border-bottom: 1px solid orange !important;
+} 
 .header {
 	position: sticky;
     flex-direction: column;
