@@ -450,12 +450,9 @@ hr {
   
 .card, .license-card { width: 100%; min-width: unset; }
 .licenses-cards { gap: 12px; }
-  header {
-        position: sticky; /* redundant but ensures mobile applies it */
-        top: 0;
-        z-index: 1000;
-  }
+
 .header {
+	position: sticky;
     flex-direction: column;
     align-items: flex-start; /* left-align everything */
     gap: 3px;
