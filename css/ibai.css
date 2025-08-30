@@ -447,7 +447,9 @@ hr {
    Responsive
    ======================== */
 @media (max-width: 768px) {
-   
+   html, body {
+    overflow-x: hidden;
+}
 	 .card, .license-card { width: 100%; min-width: unset; }
     .licenses-cards { gap: 12px; }
 
