@@ -8,7 +8,6 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-	  overflow-x: hidden;
 }
 
 a {
@@ -23,15 +22,13 @@ header {
     position: sticky;
     top: 0;
     left: 0;
-    max-width: 100%;
+    width: 100%;
     background: #fff;
     z-index: 1000;
+    border-bottom: 1px solid orange !important;
 }
 
 .header {
-	    position: sticky;
-    top: 0;
-    left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -448,17 +445,10 @@ hr {
    Responsive
    ======================== */
 @media (max-width: 768px) {
-   body, html { overflow-x: visible !important; max-width: 100vw; }
+   
 	 .card, .license-card { width: 100%; min-width: unset; }
     .licenses-cards { gap: 12px; }
-header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    max-width: 99%;
-    background: #fff;
-    z-index: 1000;
-}
+
 .header {
     flex-direction: column;
     align-items: flex-start; /* left-align everything */
@@ -473,7 +463,7 @@ header {
   }
 
   .header-left img {
-    height: 7vh;
+    height: 8vh;
   }
 
   .header-right {
@@ -492,15 +482,7 @@ header {
   }
 
   .header-right img {
-    height: 7vh;
-  }
-	.container {
-    width: 90%;
-    margin: 0 auto;
-}
-	 #chat-input,
-  #chat-input a {
-    font-size: 13px; /* adjust size only here */
+    height: 8vh;
   }
 	
     .site-footer { 
