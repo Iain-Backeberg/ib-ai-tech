@@ -485,6 +485,10 @@ hr {
   .header-right img {
     height: 8vh;
   }
+	 #chat-input,
+  #chat-input a {
+    font-size: 13px; /* adjust size only here */
+  }
 	
     .site-footer { 
 	 flex-direction: column; 
