@@ -3,12 +3,13 @@
   let messagesContainer;
   let conversation = [];
   let inputEl;
-let introRow = null;
+  let introRow = null;
 
   function scrollToBottom() {
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
   }
-function addInitialMessage() {
+
+  function addInitialMessage() {
     const row = document.createElement("div");
     row.className = "message-row";
     row.style.display = "flex";
@@ -25,9 +26,9 @@ function addInitialMessage() {
     row.appendChild(text);
     messagesContainer.appendChild(row);
     scrollToBottom();
-	     introRow = row; // store reference
+    introRow = row; // store reference
+  }
 
-}
   function createMessageRow(side, labelText, contentElement) {
     const row = document.createElement("div");
     row.className = "message-row";
@@ -109,10 +110,7 @@ function addInitialMessage() {
   }
 
   function replaceThinkingWithAnswer(wrapper, answer) {
-    // Keep the first child (label) intact
     const label = wrapper.querySelector('.bot-label'); 
-    
-    // Remove everything except the label
     wrapper.innerHTML = "";
     if (label) wrapper.appendChild(label);
 
@@ -121,37 +119,50 @@ function addInitialMessage() {
 
     let i = 0;
     function typeTick() {
-        if (i < answer.length) {
-            p.textContent += answer.charAt(i++);
-            scrollToBottom();
-            setTimeout(typeTick, 40); // WhatsApp-style typing speed
-        }
+      if (i < answer.length) {
+        p.textContent += answer.charAt(i++);
+        scrollToBottom();
+        setTimeout(typeTick, 40);
+      }
     }
 
     wrapper.appendChild(p);
     typeTick();
-}
+  }
 
   async function sendMessage(message) {
     if (!message.trim() || !inputEl) return;
 
     inputEl.value = "";
-	      // Remove intro message if it exists
+
+    // Remove intro message if it exists
     if (introRow) {
-        introRow.remove();
-        introRow = null;
+      introRow.remove();
+      introRow = null;
     }
+
     addUserMessage(message);
     conversation.push({ role: "user", content: message });
 
     const botWrapper = addBotThinking();
 
+    // Generate dynamic user_id per session
+    let userId = sessionStorage.getItem("user_id");
+    if (!userId) {
+      userId = "user_" + Math.random().toString(36).substr(2, 9);
+      sessionStorage.setItem("user_id", userId);
+    }
+
     try {
       const res = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ history: conversation })
+        body: JSON.stringify({
+          user_id: userId,
+          message: message
+        })
       });
+
       const data = await res.json();
       conversation.push({ role: "assistant", content: data.reply });
       replaceThinkingWithAnswer(botWrapper, data.reply || "Sorry, something went wrong.");
@@ -164,7 +175,14 @@ function addInitialMessage() {
   function initChat() {
     messagesContainer = document.getElementById("messages-container");
     inputEl = document.getElementById("chat-input");
-    addInitialMessage();  // <-- intro message
+
+    // Ensure user_id exists at the start
+    if (!sessionStorage.getItem("user_id")) {
+      const id = "user_" + Math.random().toString(36).substr(2, 9);
+      sessionStorage.setItem("user_id", id);
+    }
+
+    addInitialMessage();
 
     if (inputEl) {
       inputEl.value = "";
