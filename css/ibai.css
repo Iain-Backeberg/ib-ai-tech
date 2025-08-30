@@ -450,7 +450,7 @@ hr {
    html, body {
     overflow-x: hidden;
 }
-	 .card, .license-card { width: 100%; min-width: unset; }
+	 .card, .license-card { width: 100%;}
     .licenses-cards { gap: 12px; }
 
 .header {
