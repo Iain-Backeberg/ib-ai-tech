@@ -23,7 +23,7 @@ header {
     position: sticky;
     top: 0;
     left: 0;
-    width: 99%;
+    width: 100%;
     background: #fff;
     z-index: 1000;
     border-bottom: 1px solid orange !important;
@@ -449,7 +449,15 @@ hr {
    
 	 .card, .license-card { width: 100%; min-width: unset; }
     .licenses-cards { gap: 12px; }
-
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 95%;
+    background: #fff;
+    z-index: 1000;
+    border-bottom: 1px solid orange !important;
+}
 .header {
     flex-direction: column;
     align-items: flex-start; /* left-align everything */
