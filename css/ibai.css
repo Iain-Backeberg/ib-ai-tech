@@ -9,10 +9,37 @@ html, body {
     padding: 0;
     box-sizing: border-box;
 }
+/* highlight only elements that actually cause horizontal overflow */
 * {
-  outline: 1px solid rgba(255, 0, 0, 0.3); /* visual grid */
+  outline: 1px solid rgba(0, 0, 255, 0.3); /* light blue baseline */
 }
 
+body {
+  overflow-x: auto !important;
+}
+
+*[style], div, section, img, table {
+  max-width: 100vw; /* stop them breaking out */
+}
+
+body::after {
+  content: "⚠ Overflow detected!";
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+  z-index: 9999;
+  display: none;
+}
+
+@supports (overflow-x: clip) {
+  body::after {
+    display: block; /* show warning if browser supports check */
+  }
+}
 html, body {
   overflow-x: hidden;
 }
