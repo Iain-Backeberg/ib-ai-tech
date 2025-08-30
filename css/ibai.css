@@ -26,7 +26,6 @@ header {
     max-width: 100%;
     background: #fff;
     z-index: 1000;
-    border-bottom: 1px solid orange !important;
 }
 
 .header {
@@ -446,14 +445,14 @@ hr {
    Responsive
    ======================== */
 @media (max-width: 768px) {
-   body, html { overflow-x: visible !important; max-width: 100%; }
+   body, html { overflow-x: visible !important; max-width: 100vw; }
 	 .card, .license-card { width: 100%; min-width: unset; }
     .licenses-cards { gap: 12px; }
 header {
     position: sticky;
     top: 0;
     left: 0;
-    max-width: 100%;
+    max-width: 99%;
     background: #fff;
     z-index: 1000;
     border-bottom: 1px solid orange !important;
