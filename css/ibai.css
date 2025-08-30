@@ -446,7 +446,14 @@ hr {
    Responsive
    ======================== */
 @media (max-width: 768px) {
-   
+   html, body {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #393939;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	overflow:hidden;
 	 .card, .license-card { width: 100%; min-width: unset; }
     .licenses-cards { gap: 12px; }
 
