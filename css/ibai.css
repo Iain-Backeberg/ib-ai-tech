@@ -10,7 +10,7 @@ html, body {
     box-sizing: border-box;
     overflow-x: hidden;
 }
-}
+
 
 a {
     text-decoration: none;
@@ -447,11 +447,9 @@ hr {
    Responsive
    ======================== */
 @media (max-width: 768px) {
-   html, body {
-    overflow-x: hidden;
-}
-	 .card, .license-card { width: 100%;}
-    .licenses-cards { gap: 12px; }
+  
+.card, .license-card { width: 100%; min-width: unset; }
+.licenses-cards { gap: 12px; }
 
 .header {
     flex-direction: column;
