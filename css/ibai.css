@@ -454,6 +454,7 @@ hr {
     padding: 0;
     box-sizing: border-box;
 	overflow:hidden;
+   }
 	 .card, .license-card { width: 100%; min-width: unset; }
     .licenses-cards { gap: 12px; }
 
