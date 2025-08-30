@@ -1,5 +1,5 @@
 (function() {
-  const API_URL = "https://backend-785579985879.africa-south1.run.app";
+  const API_URL = "https://backend-785579985879.africa-south1.run.app/chat";
   let messagesContainer;
   let conversation = [];
   let inputEl;
