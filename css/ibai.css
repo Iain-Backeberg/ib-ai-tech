@@ -8,8 +8,9 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-	overflow:hidden;
+    overflow-x: hidden;
 }
+
 
 a {
     text-decoration: none;
@@ -392,13 +393,13 @@ hr {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: #f9f9f9;
-    border: 1px solid #393939;
     padding: 6px 10px;
     border-radius: 8px;
     font-weight: bold;
     color: #393939;
     margin-top: 4px;
+	 background: #FFFFFF;
+    border: none;
 }
 
 .bouncing-dots span {
@@ -435,7 +436,7 @@ hr {
     padding: 10px;
     border: 1px solid orange;
     border-radius: 12px;
-    font-size: 16px;
+    font-size: 15px;
     box-sizing: border-box;
 }
 
@@ -446,17 +447,9 @@ hr {
    Responsive
    ======================== */
 @media (max-width: 768px) {
-   html, body {
-    font-family: "Source Sans Pro", sans-serif;
-    color: #393939;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-	overflow:hidden;
-   }
-	 .card, .license-card { width: 100%; min-width: unset; }
-    .licenses-cards { gap: 12px; }
+  
+.card, .license-card { width: 100%; min-width: unset; }
+.licenses-cards { gap: 12px; }
 
 .header {
     flex-direction: column;
@@ -479,7 +472,7 @@ hr {
     display: flex;
     align-items: center; /* ensures image + text vertically centred */
     gap: 20px; 
-    padding-left: 0p; /* remove any default indentation */
+    padding-left: 0; /* remove any default indentation */
   }
 
   .header-right a {
@@ -493,7 +486,13 @@ hr {
   .header-right img {
     height: 8vh;
   }
-	
+ #chat-input,
+    #chat-input a {
+        font-size: 10px;
+    }
+	.input-container span {
+        font-size: 10px;
+    }
     .site-footer { 
 	 flex-direction: column; 
 	 align-items: center; 
@@ -509,4 +508,3 @@ hr {
 	 max-height: 18px; 
 	 }
 }
-
