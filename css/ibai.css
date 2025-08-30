@@ -470,7 +470,7 @@ hr {
     display: flex;
     align-items: center; /* ensures image + text vertically centred */
     gap: 20px; 
-    padding-left: 0p; /* remove any default indentation */
+    padding-left: 0; /* remove any default indentation */
   }
 
   .header-right a {
