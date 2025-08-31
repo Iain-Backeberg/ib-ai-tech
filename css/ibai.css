@@ -452,7 +452,10 @@ hr {
    Responsive
    ======================== */
 @media (max-width: 768px) {
-   header {
+ html, body {
+	 padding-top: 80px; /* desktop header */
+ }
+	header {
     position: fixed;
     top: 0;
     left: 0;
