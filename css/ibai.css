@@ -452,7 +452,16 @@ hr {
    Responsive
    ======================== */
 @media (max-width: 768px) {
-   
+   header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+	max-width: 100vw; /* fix horizontal scroll */
+    background: #fff;
+    z-index: 1000;
+    border-bottom: 1px solid orange !important;
+}
 	 .card, .license-card { width: 100%; min-width: unset; }
     .licenses-cards { gap: 12px; }
 
