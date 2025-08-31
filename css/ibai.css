@@ -6,7 +6,7 @@ html, body {
     color: #393939;
     line-height: 1.5;
     margin: 0;
-    padding: 0;
+  padding-top: 80px; /* desktop header */
 	width: 100%;
 	max-width: 100%;
     box-sizing: border-box;
