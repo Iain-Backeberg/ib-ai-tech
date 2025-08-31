@@ -452,14 +452,14 @@ hr {
 .header {
     flex-direction: column;
     align-items: flex-start; /* left-align everything */
-    gap: 3px;
+    gap: 1px;
   }
 
   .header-left {
     font-size: 14px;
     display: flex;
     align-items: center; /* ensures image + text vertically centred */
-    gap: 5px;
+    gap: 1px;
   }
 
   .header-left img {
@@ -469,7 +469,7 @@ hr {
   .header-right {
     display: flex;
     align-items: center; /* ensures image + text vertically centred */
-    gap: 5px; 
+    gap: 1px; 
     padding-left: 0; /* remove any default indentation */
   }
 
@@ -477,7 +477,7 @@ hr {
     font-size: 11px;
     display: flex;
     align-items: center; /* ensures text aligns with image */
-    gap: 3px;
+    gap: 1px;
     padding: 0; /* remove extra padding */
   }
 
