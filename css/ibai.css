@@ -459,7 +459,7 @@ hr {
     font-size: 14px;
     display: flex;
     align-items: center; /* ensures image + text vertically centred */
-    gap: 10px;
+    gap: 5px;
   }
 
   .header-left img {
@@ -469,7 +469,7 @@ hr {
   .header-right {
     display: flex;
     align-items: center; /* ensures image + text vertically centred */
-    gap: 20px; 
+    gap: 5px; 
     padding-left: 0; /* remove any default indentation */
   }
 
