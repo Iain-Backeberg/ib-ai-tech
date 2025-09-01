@@ -101,7 +101,6 @@
     dots.className = "bouncing-dots";
     dots.innerHTML = "<span></span><span></span><span></span>";
 
-    box.appendChild(brain);
     box.appendChild(thinkingText);
     box.appendChild(dots);
 
