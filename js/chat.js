@@ -91,17 +91,17 @@
   // brain.style.fontSize = "24px";
 
     // Thinking text
-    const thinkingText = document.createElement("span");
-    thinkingText.textContent = "Thinking...";
-    thinkingText.style.fontSize = "12px";
-    thinkingText.style.color = "#555";
+   // const thinkingText = document.createElement("span");
+    //thinkingText.textContent = "Thinking...";
+    //thinkingText.style.fontSize = "12px";
+    //thinkingText.style.color = "#555";
 
     // Bouncing dots
     const dots = document.createElement("span");
     dots.className = "bouncing-dots";
     dots.innerHTML = "<span></span><span></span><span></span>";
 
-    box.appendChild(thinkingText);
+    //box.appendChild(thinkingText);
     box.appendChild(dots);
 
     // Always label as "IBAI Consultant"
