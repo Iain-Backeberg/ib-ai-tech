@@ -86,14 +86,14 @@
     box.style.gap = "8px";
 
     // Brain icon
-    const brain = document.createElement("span");
-    brain.textContent = "🧠";
-    brain.style.fontSize = "24px";
+ //   const brain = document.createElement("span");
+  //  brain.textContent = "";
+  // brain.style.fontSize = "24px";
 
     // Thinking text
     const thinkingText = document.createElement("span");
     thinkingText.textContent = "Thinking...";
-    thinkingText.style.fontSize = "16px";
+    thinkingText.style.fontSize = "12px";
     thinkingText.style.color = "#555";
 
     // Bouncing dots
@@ -110,25 +110,31 @@
   }
 
   function replaceThinkingWithAnswer(wrapper, answer) {
-    const label = wrapper.querySelector('.bot-label'); 
-    wrapper.innerHTML = "";
-    if (label) wrapper.appendChild(label);
+  const label = wrapper.querySelector('.bot-label'); 
+  wrapper.innerHTML = "";
+  if (label) wrapper.appendChild(label);
 
-    const p = document.createElement("p");
-    p.style.color = "#393939";
+  const p = document.createElement("p");
+  p.style.color = "#393939";
+  wrapper.appendChild(p);
 
-    let i = 0;
-    function typeTick() {
-      if (i < answer.length) {
-        p.textContent += answer.charAt(i++);
-        scrollToBottom();
-        setTimeout(typeTick, 40);
-      }
+  let i = 0;
+  const normalTypingCount = 20; // first 20 chars typed slowly
+  const normalSpeed = 40;       // ms per character
+  const fastSpeed = 5;          // ms per character for the rest
+
+  function typeTick() {
+    if (i < answer.length) {
+      p.textContent += answer.charAt(i++);
+      scrollToBottom();
+
+      const delay = i <= normalTypingCount ? normalSpeed : fastSpeed;
+      setTimeout(typeTick, delay);
     }
-
-    wrapper.appendChild(p);
-    typeTick();
   }
+
+  typeTick();
+}
 
   async function sendMessage(message) {
     if (!message.trim() || !inputEl) return;
