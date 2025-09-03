@@ -152,11 +152,9 @@
     const botWrapper = addBotThinking();
 
     // Generate dynamic user_id per session
-    let userId = sessionStorage.getItem("user_id");
-    if (!userId) {
-      userId = "user_" + Math.random().toString(36).substr(2, 9);
-      sessionStorage.setItem("user_id", userId);
-    }
+   // Always generate a new user_id on page load
+const id = "user_" + Math.random().toString(36).substr(2, 9);
+sessionStorage.setItem("user_id", id);
 
     try {
       const res = await fetch(API_URL, {
