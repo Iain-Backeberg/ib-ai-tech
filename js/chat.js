@@ -158,7 +158,6 @@
       sessionStorage.setItem("user_id", userId);
     }
 
-
     try {
       const res = await fetch(API_URL, {
         method: "POST",
