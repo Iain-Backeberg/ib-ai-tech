@@ -181,11 +181,10 @@
     messagesContainer = document.getElementById("messages-container");
     inputEl = document.getElementById("chat-input");
 
-    // Ensure user_id exists at the start
-    if (!sessionStorage.getItem("user_id")) {
-      const id = "user_" + Math.random().toString(36).substr(2, 9);
-      sessionStorage.setItem("user_id", id);
-    }
+   // Always generate a fresh user_id per reload
+const id = "user_" + Math.random().toString(36).substr(2, 9);
+sessionStorage.setItem("user_id", id);
+    
 
     addInitialMessage();
 
