@@ -113,6 +113,8 @@ position: fixed;
   border-radius: 12px;
   padding: 20px;
   z-index: 1000;
+  display: none; /* hidden by default */
+	
 }
 /* ========================
    Buttons
