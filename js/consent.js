@@ -26,17 +26,19 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
+    // === OPEN / CLOSE FUNCTIONS ===
   function openBanner() {
     let saved = JSON.parse(localStorage.getItem("cookieConsent")) || {};
     document.getElementById("functional").checked = saved.functional || false;
     document.getElementById("analytics").checked = saved.analytics || false;
     document.getElementById("performance").checked = saved.performance || false;
 
-    let banner = document.getElementById("cookie-banner");
-    let bannerHeight = banner.offsetHeight;
-    banner.style.bottom = `calc(50% - ${bannerHeight / 2}px)`;
+    document.getElementById("cookie-banner").style.display = "block";
   }
 
+  document.getElementById("close-banner").onclick = () => {
+    document.getElementById("cookie-banner").style.display = "none";
+  };
   // Event bindings
   document.getElementById("manage-cookies-btn").onclick = openBanner;
   document.getElementById("close-banner").onclick = () => {
