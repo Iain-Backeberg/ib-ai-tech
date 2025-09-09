@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
+  // 1. Clone template content into banner
+  const template = document.getElementById("consent-template");
+  const clone = template.content.cloneNode(true);
+  document.getElementById("cookie-banner").appendChild(clone);
 
+  // 2. Now all elements exist — safe to use getElementById
   function saveConsent(consent) {
     localStorage.setItem("cookieConsent", JSON.stringify(consent));
   }
@@ -32,29 +37,24 @@ document.addEventListener("DOMContentLoaded", function() {
     banner.style.bottom = `calc(50% - ${bannerHeight / 2}px)`;
   }
 
-  // Open the banner when user clicks "manage cookies"
+  // Event bindings
   document.getElementById("manage-cookies-btn").onclick = openBanner;
-
-  // Close banner without saving
   document.getElementById("close-banner").onclick = () => {
     document.getElementById("cookie-banner").style.bottom = "-700px";
   };
 
-  // Reject all except necessary
   document.getElementById("reject-all").onclick = () => {
     document.getElementById("functional").checked = false;
     document.getElementById("analytics").checked = false;
     document.getElementById("performance").checked = false;
   };
 
-  // Accept all
   document.getElementById("accept-all").onclick = () => {
     document.getElementById("functional").checked = true;
     document.getElementById("analytics").checked = true;
     document.getElementById("performance").checked = true;
   };
 
-  // Save preferences
   document.getElementById("save-prefs").onclick = () => {
     let consent = {
       functional: document.getElementById("functional").checked,
@@ -69,17 +69,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   };
 
-  // Check saved consent
+  // First-time behaviour
   let savedConsent = JSON.parse(localStorage.getItem("cookieConsent"));
-
   if (savedConsent) {
-    // If consent exists, respect it
     if (savedConsent.analytics) {
       loadAnalytics();
     }
   } else {
-    // First visit (no consent saved) → open banner
-    openBanner();
+    openBanner(); // show automatically first time
   }
-
 });
