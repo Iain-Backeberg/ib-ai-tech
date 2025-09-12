@@ -12,7 +12,15 @@
 <meta name="robots" content="noindex, nofollow"> 
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="css/ibai.css">
-<script src="js/analytics.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WTDLZV4CGV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WTDLZV4CGV');
+</script>
 </head> 
 
  <body> 
@@ -442,7 +450,20 @@ Some cookies are set by third-party services that we use, such as the hosting pl
 </div> 
 </template>  
 </div>
- <script src="js/ga_consent.js"></script>
+<!-- GA Consent Mode setup -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Default deny cookies until user consents
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied'
+  });
+
+  gtag('js', new Date());
+  gtag('config', 'G-WTDLZV4CGV', { anonymize_ip: true });
+</script>
 <script src="js/consent.js"></script>
 <script src="js/chat.js"></script>
 <script src="js/swap.js"></script>
