@@ -148,9 +148,9 @@ header {
     text-decoration: none;
 }
 
-  .three-columns {
+  .two-columns {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
     font-size: 15px;
     text-align: left;
@@ -475,7 +475,7 @@ hr {
     z-index: 1000;
     border-bottom: 1px solid orange !important;
 }
-	.three-columns {
+	.two-columns {
       grid-template-columns: 1fr;
     }
 	 .card, .license-card { width: 100%; min-width: unset; }
