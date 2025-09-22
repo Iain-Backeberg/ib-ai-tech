@@ -141,9 +141,20 @@ header {
     font-size: 20px;
 }
 
+/* ========================
+   AI Solutions
+   ======================== */
 .intro-text a:hover {
     text-decoration: none;
 }
+
+  .three-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    font-size: 15px;
+    text-align: left;
+  }
 
 /* ========================
    Cards
@@ -464,6 +475,9 @@ hr {
     z-index: 1000;
     border-bottom: 1px solid orange !important;
 }
+	.three-columns {
+      grid-template-columns: 1fr;
+    }
 	 .card, .license-card { width: 100%; min-width: unset; }
     .licenses-cards { gap: 12px; }
 
