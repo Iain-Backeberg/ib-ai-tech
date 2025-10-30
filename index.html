@@ -12,16 +12,11 @@
 <meta property="og:type" content="website">
 <meta name="image" property="og:image" content="https://www.ib-ai.tech/demo-images/IBAI_HOME.png">
 <meta name="author" content="Iain Backeberg">
-<meta name="robots" content="index, follow"> 
+<meta name="robots" content="noindex, nofollow"> 
 
 <!-- Canonical -->
 <link rel="canonical" href="https://www.ib-ai.tech/">
 
-<!-- Twitter card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="IBAI | Delivering AI Solutions from a Human Perspective">
-<meta name="twitter:description" content="As an AI Solutions Provider, I’m not just a freelancer executing isolated tasks. I design, architect, and deliver bespoke, end-to-end AI solutions for solopreneurs, startups, and small businesses. IBAI's mission is to help you work smarter and serve clients better, and to help you bridge the gap between people, processes, technology, and AI.">
-<meta name="twitter:image" content="https://www.ib-ai.tech/demo-images/IBAI_HOME.png">
 
 <!--Styles-->  
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -36,149 +31,9 @@
   gtag('config', 'G-WTDLZV4CGV');
 </script>
 
-<!--
-  ADDED: visually-hidden H1 for SEO/LLM (accessible, does not affect layout)
-  This improves crawlability and LLM understanding without changing page appearance.
--->
-<style>
-  .visually-hidden {
-    position: absolute !important;
-    height: 1px; width: 1px;
-    overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
-    white-space: nowrap; border: 0; padding: 0; margin: -1px;
-  }
-</style>
-
-<!--
-  ADDED: LocalBusiness schema (GEO / local signals), WebPage, and FAQ (AEO) JSON-LD.
-  These are under-the-hood—search engines & AI assistants read them; users won't see them.
--->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "IBAI",
-  "url": "https://www.ib-ai.tech",
-  "telephone": "+27847409888",
-  "description": "IBAI designs, architects, and delivers bespoke, end-to-end AI solutions for solopreneurs, startups and small businesses. IBAI's mission is to help you work smarter and serve clients better, and to bridge the gap between people, processes, technology, and AI. Core IBAI service offerings include chatbots, document automation, Retrieval-Augmented Generation (RAG), voice AI, Agentic AI, AI-powered forms and workflows, custom integrations & APIs, and AI strategy & advisory.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "ZA"
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "IBAI – Delivering AI Solutions from a Human Perspective",
-  "url": "https://www.ib-ai.tech",
-  "description": "IBAI designs, architects, and delivers bespoke, end-to-end AI solutions for solopreneurs, startups and small businesses. IBAI's mission is to help you work smarter and serve clients better, and to bridge the gap between people, processes, technology, and AI. Core IBAI service offerings include chatbots, document automation, Retrieval-Augmented Generation (RAG), voice AI, Agentic AI, AI-powered forms and workflows, custom integrations & APIs, and AI strategy & advisory.",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "IBAI",
-    "url": "https://www.ib-ai.tech"
-  },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://www.ib-ai.tech/?s={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What services does IBAI offer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "IBAI designs, architects, and delivers bespoke, end-to-end AI solutions for solopreneurs, startups and small businesses. IBAI's mission is to help you work smarter and serve clients better, and to bridge the gap between people, processes, technology, and AI. Core IBAI service offerings include chatbots, document automation, Retrieval-Augmented Generation (RAG), voice AI, Agentic AI, AI-powered forms and workflows, custom integrations & APIs, and AI strategy & advisory."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I contact IBAI?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Contact Iain Backeberg directly via WhatsApp at +27 84 740 9888 or by email at iain@ib-ai.tech."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What do your solutions cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Pricing is bespoke, quoted individually per project. Pricing is based on factos such as complexity and specific needs of the client. There is no one-size-fits-all pricing structure."
-      }
-    }
-  ]
-}
-</script> 
- <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Chatbots",
-    "description": "LLM-powered bots (e.g. GPT-based, multi-turn conversation, high contextuality), Programmed bots (rule-based flows, logic-driven, keyword/intent detection), Hybrid bots (LLM fallback or handoff, lead capture with logic overrides). AI you can chat with that actually understands your questions and gives useful answers."
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Document Automation",
-    "description": "Form-to-doc pipelines (user inputs → auto-generated PDFs/Docs), Template-based generation (contracts, letters, certificates), E-signature integration (e.g. Zoho, DocuSign, or native embedding). Automatically pull data from forms or files, move it between systems, and turn it into ready-to-use documents."
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Smart Knowledge Search (RAG)",
-    "description": "Knowledge base search + LLM generation, Custom file ingestion (PDFs, websites, internal docs), Source citation and trust overlays, Vector database setup (e.g. FAISS, Weaviate). Users can ask questions and instantly get answers pulled from your own files, websites, or knowledge bases."
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Voice AI / Voicebots",
-    "description": "Speech-to-text + LLM processing, Text-to-speech output, Phone or browser-based deployment. Talk to an AI that listens, understands, and responds naturally over phone or browser."
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Agentic AI",
-    "description": "Goal-oriented agents (task execution across tools), Multi-step planning & memory, API interaction, calendar/email automation. AI that can plan, take actions, and complete tasks across apps and tools for you."
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "AI-Powered Forms & Workflows",
-    "description": "Smart intake forms with branching logic, AI-generated responses from form entries, Workflow routing (notifications, CRM updates). Smart forms that adjust to user input, generate responses, and trigger the right follow-up actions automatically."
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Custom Integrations & APIs",
-    "description": "Hosting & email integration, CRM, email platforms, LMS, internal systems. Connect AI to your email, CRM, LMS, or internal systems so it works seamlessly with the tools you already use."
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "AI Strategy & Advisory",
-    "description": "Scoping client use cases, Advisory and Roadmapping AI implementation phases. Get practical advice and a clear roadmap for where and how AI can make your business more efficient."
-  }
-]
-</script>
 </head> 
 
  <body>
-
-   <!--Hidden Elements for SEO/LLM-->
-<h1 class="visually-hidden">IBAI — Delivering AI Solutions from a Human Perspective</h1>
-<h2 class="visually-hidden">Chatbots, Document Automation, Retrieval-Augmented Generation, RAG, Voice AI, Agentic AI, AI-Powered Forms & Workflows, Custom Integrations & APIs, AI Strategy & Advisory</h2>  
  <!-- Header --> 
  <header>
  <div class="sticky-header container"> 
@@ -201,11 +56,11 @@
  
  <!-- Home Page Intro --> 
  <div class="intro-text"> 
-IBAI’s mission was to help you work smarter, serve clients better, and bridge the gap between people, processes, technology, and AI.
+IBAI’s mission was to help you work smarter, serve clients better, and bridge the gap between people, processes, technology, and AI.<br>
 
-However, with the rapid development and release of so many free tools that offer similar capabilities, I simply can’t keep up with the pace of change as a solopreneur. It’s no longer viable to compete in this ever-evolving space.
+However, with the rapid development and release of so many free tools that offer similar capabilities, I simply can’t keep up with the pace of change as a solopreneur. It’s no longer viable to compete in this ever-evolving space.<br>
 
-Thank you for your support and interest in IBAI.
+Thank you all for your support and interest in IBAI.
  </div>
  <!--Home Page Intro Text End--> 
   <hr>
@@ -215,17 +70,11 @@ Thank you for your support and interest in IBAI.
 <!-- Footer --> 
 <footer class="site-footer">
 <div class="footer-left">Copyright © 2025 Iain Backeberg (ib-ai.tech). All Rights Reserved
-<br>
-<a href="javascript:void(0)" onclick="loadTerms()">Terms and Conditions</a> | <a href="javascript:void(0)" onclick="loadPrivacy()">Privacy Policy</a> | <a href="javascript:void(0)" onclick="loadCookies()">Cookies Policy</a> </div>
+</div>
 <div class="footer-right"> 
 Hosted on <img src="https://www.ib-ai.tech/images/github.png" alt="GitHub Logo">&nbsp; Run in <img src="https://www.ib-ai.tech/images/gcloud.png" alt="Google Cloud Logo"> 
 </div> 
 </footer>
 <!--Footer End-->
-
-
-
-<!-- GA Consent Mode setup -->
-
 </body>
 </html>
